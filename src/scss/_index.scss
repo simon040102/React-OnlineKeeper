@@ -98,6 +98,14 @@ footer {
     }
   }
 }
+@media(max-width:478px){
+  .login-chose,
+.register-chose {
+  justify-content: space-between;
+   padding-left: 10px;
+  padding-right: 10px;
+}
+}
 header {
   background-color: #bfdbf7;
   margin: auto;
@@ -269,3 +277,4 @@ button{
   width: 100%;
 }
 }
+

@@ -47,7 +47,7 @@ const CreateArea = (props) => {
       });
   };
   return (
-    <div className="container">
+    <div className="">
       <div className="inputArea">
         <textarea
           onChange={CreateNew}

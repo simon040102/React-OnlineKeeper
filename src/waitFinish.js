@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import DeleteIcon from '@mui/icons-material/Delete';
 import withReactContent from 'sweetalert2-react-content';
 const WaitFinish=(props)=>{
      const authorization = localStorage.getItem('authorization');
@@ -25,7 +26,7 @@ const WaitFinish=(props)=>{
    }
     return (
       <div className="container waitFinish">
-        <button onClick={deleteFinish}>Delete {props.done.length} Finished</button>
+        <button onClick={deleteFinish}><DeleteIcon/>Delete {props.done.length} Finished</button>
         <div className=" waitFinishItem">
           {props.notDone.length} item wait finish
         </div>

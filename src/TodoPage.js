@@ -31,7 +31,6 @@ const checkAuthorization = () => {
           });
     }
     const [chose,setChose]=useState('all')
-    console.log(chose)
     let notDone = notes.filter((noteItem) => typeof(noteItem.completed_at)=='object');
     let done = notes.filter((noteItem) => typeof noteItem.completed_at == 'string');
     const showData=()=>{

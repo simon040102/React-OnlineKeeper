@@ -375,6 +375,30 @@ header button {
   cursor: pointer;
 }
 
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.select li {
+  width: 30%;
+}
+
+.select button {
+  width: 100%;
+  line-height: 24px;
+  background-color: #bfdbf7;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
 @media (max-width: 478px) {
   .note {
     width: 100%;

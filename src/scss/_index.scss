@@ -258,6 +258,23 @@ header{
     cursor: pointer;
   }
 }
+.select{
+  display: flex;
+  max-width: 500px;
+  justify-content: space-between;
+  margin-top: 10px;
+ li{
+  width: 30%;
+ }
+ button{
+  width: 100%;
+  line-height: 24px;
+  background-color:#bfdbf7;
+  border:none;
+  border-radius: 10px;
+  font-size: 20px;
+ }
+}
 @media(max-width:478px){
 .note{
   width: 100%;
@@ -278,3 +295,4 @@ button{
 }
 }
 
+// *{outline:red 1px solid}

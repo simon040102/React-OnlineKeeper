@@ -14,7 +14,7 @@ const Select=(props)=>{
       <ul className="select container" onClick={chose}>
         <li>
           <button
-            className={active.tag == 'all' ? 'changeColor' : null}
+            className={active.tag == 'all' && 'changeColor'}
             data-tab="all"
           >
             All
@@ -22,7 +22,7 @@ const Select=(props)=>{
         </li>
         <li>
           <button
-            className={active.tag == 'string' ? 'changeColor' : null}
+            className={active.tag == 'string' && 'changeColor'}
             data-tab="string"
           >
             Done
@@ -30,7 +30,7 @@ const Select=(props)=>{
         </li>
         <li>
           <button
-            className={active.tag == 'object' ? 'changeColor' : null}
+            className={active.tag == 'object' && 'changeColor'}
             data-tab="object"
           >
             undone

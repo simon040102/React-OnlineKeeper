@@ -94,8 +94,8 @@ const checkAuthorization = () => {
         <CreateArea init={axiosData} />
         <WaitFinish notDone={notDone} done={done} init={axiosData} />
         <Chose change={setChose} />
-        <div className="container">
-          <div className="container noteItem">{showData()}</div>
+        <div className=" mx-auto">
+          <div className="noteItem flex flex-wrap justify-center mt-5">{showData()}</div>
         </div>
       </div>
     );

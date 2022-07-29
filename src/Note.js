@@ -62,7 +62,7 @@ const Note = (props) => {
   }
   return (
     <div
-      className="note"
+      className="relative p-4 w-9/12 md:w-80 h-40 bg-gray-50 shadow-2xl rounded-xl mb-5 mx-3"
       style={{ backgroundColor: doneCheck() && '#022b3a81' }}
       onMouseMove={mouseEdit}
       onMouseOut={mouseOut}
@@ -76,9 +76,8 @@ const Note = (props) => {
       >
         {props.content}
       </p>
-      <div className="noteButton">
+      <div className="noteButton absolute bottom-2 flex justify-between w-full pr-10">
         <button
-          style={{ backgroundColor: doneCheck() && '#e1e5f2a1' }}
           data-id={props.id}
           onClick={handleDone}
         >
@@ -93,7 +92,6 @@ const Note = (props) => {
             <ModeEditIcon  style={{ display: edit ? 'inline' : 'none' }} />
           </button> */}
           <button
-            style={{ backgroundColor: doneCheck() && '#e1e5f2a1' }}
             data-id={props.id}
             onClick={handleDelete}
           >

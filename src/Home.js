@@ -29,9 +29,9 @@ const Home = () => {
     checkAuthorization();
   }, []);
   return (
-    <div className="home">
-      <div className="home-content container">
-        <HomeImg className="home-img" />
+    <div className="relative ">
+      <div className=" px-5 flex mt-12 justify-center ">
+        <HomeImg className="hidden w-6/12 md:inline-flex" />
         {currentPage ? (
           <Login change={changePage} />
         ) : (

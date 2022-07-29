@@ -25,9 +25,15 @@ const WaitFinish=(props)=>{
     })
    }
     return (
-      <div className="container waitFinish">
-        <button onClick={deleteFinish}><DeleteIcon/>Delete {props.done.length} Finished</button>
-        <div className=" waitFinishItem">
+      <div className="w-9/12 sm:flex-none md:w-6/12 mx-auto md:flex justify-between">
+        <button
+          className="md:w-5/12 w-full mb-3 md:mb-0 bg-red-300 rounded-xl leading-8"
+          onClick={deleteFinish}
+        >
+          <DeleteIcon className="text-md flex -mt-1" />
+          Delete {props.done.length} Finished
+        </button>
+        <div className="md:w-1/2 w-full mb-3 md:mb-0 text-center text-xl rounded-xl leading-8 text-white bg-gray-800">
           {props.notDone.length} item wait finish
         </div>
       </div>

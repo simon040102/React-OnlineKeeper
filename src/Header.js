@@ -12,13 +12,19 @@ const Header=()=>{
          navigate('/');
     }
     return (
-      <header>
-        <div className="headerName">
-            
-          <h1><LightbulbCircleIcon style={{fontSize:'30px'}}/>Keeper</h1>
+      <header className="bg-sky-200 mx-auto py-3 px-8 mb-12 shadow-2xl">
+        <div className="flex justify-between ">
+          <h1 className="text-sky-900 text-4xl mt-2  md:text-6xl font-bold">
+            <LightbulbCircleIcon style={{ fontSize: '40px' }} />
+            Keeper
+          </h1>
           <div>
-            <h2>Welcome {nickname}</h2>
-            <button onClick={Logout}>Logout</button>
+            <h2 className="text-sky-900 font-bold text-2xl md:text-4xl mb-2">
+              Welcome {nickname}
+            </h2>
+            <button className="float-right text-xl underline" onClick={Logout}>
+              Logout
+            </button>
           </div>
         </div>
       </header>

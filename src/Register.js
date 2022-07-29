@@ -54,43 +54,65 @@ const Register = (props) => {
   };
 
   return (
-    <div className="Register">
-      <h2>Register Account</h2>
+    <div className=" w-9/12 md:w-5/12">
+      <h2 className="text-3xl md:text-6xl font-bold text-center mb-5 text-blue-200">
+        Register Account
+      </h2>
       <form>
-        <h3>Email</h3>
+        <h3 className="text-xl md:text-3xl font-bold leading-8 text-white mb-2">
+          Email
+        </h3>
         <input
+          className="w-full h-8 md:h-12 text-xl md:text-3xl mb-2 md:mb-8 rounded-2xl indent-8"
           onChange={handleChange}
           type="email"
           name="email"
           value={registerInform.email}
         />
-        <h3>NickName</h3>
+        <h3 className="text-xl md:text-3xl font-bold leading-8 text-white mb-2">
+          NickName
+        </h3>
         <input
+          className="w-full h-8 md:h-12 text-xl md:text-3xl mb-2 md:mb-8 rounded-2xl indent-8"
           onChange={handleChange}
           type="text"
           name="nickname"
           value={registerInform.nickName}
         />
-        <h3>Password</h3>
+        <h3 className="text-xl md:text-3xl font-bold leading-8 text-white mb-2">
+          Password
+        </h3>
         <input
+          className="w-full h-8 md:h-12 text-xl md:text-3xl mb-2 md:mb-8 rounded-2xl indent-8"
           onChange={handleChange}
           type="password"
           name="password"
           value={registerInform.password}
         />
-        <h3>Check Password</h3>
+        <h3 className="text-xl md:text-3xl font-bold leading-8 text-white mb-2">
+          Check Password
+        </h3>
         <input
+          className="w-full h-8 md:h-12 text-3xl mb-2 md:mb-8 rounded-2xl indent-8"
           onChange={handleChange}
           type="password"
           name="checkPassword"
           value={registerInform.checkPassword}
         />
       </form>
-      <div className="register-chose">
-        <button onClick={registerNew} style={{ backgroundColor: '#022B3A' }}>
+      <div className="flex mt-3 md:mt-0 justify-around px-8">
+        <button
+          className="font-bold text-xl px-3 leading-9 border-2 border-teal-50 text-teal-100 cursor-pointer rounded-md bg-blue-900 hover:underline"
+          onClick={registerNew}
+        >
           Register
         </button>
-        <button onClick={handleClick}>Login</button>
+        <button
+          className="font-bold text-xl px-3 leading-9 border-2 border-teal-50 text-teal-100 cursor-pointer rounded-md bg-teal-700 hover:underline"
+          onClick={handleClick}
+        >
+          Login
+        </button>
       </div>
     </div>
   );

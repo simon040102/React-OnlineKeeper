@@ -11,26 +11,59 @@ const Select=(props)=>{
         
     }
     return (
-      <ul className="select container" onClick={chose}>
-        <li>
+      <ul
+        className="flex select space-x-3 mt-3 container mx-auto w-9/12 md:w-6/12"
+        onClick={chose}
+      >
+        <li className="w-1/3">
           <button
-            className={active.tag == 'all' && 'changeColor'}
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            style={
+              active.tag == 'all'
+                ? {
+                    backgroundColor: '#1f7a8c',
+                    border: '2px solid #022b3a',
+                    color: 'white',
+                    boxShadow: '0 10px 10px 0 #0000004d',
+                  }
+                : null
+            }
             data-tab="all"
           >
             All
           </button>
         </li>
-        <li>
+        <li className="w-1/3">
           <button
-            className={active.tag == 'string' && 'changeColor'}
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            style={
+              active.tag == 'string'
+                ? {
+                    backgroundColor: '#1f7a8c',
+                    border: '2px solid #022b3a',
+                    color: 'white',
+                    boxShadow: '0 10px 10px 0 #0000004d',
+                  }
+                : null
+            }
             data-tab="string"
           >
             Done
           </button>
         </li>
-        <li>
+        <li className="w-1/3">
           <button
-            className={active.tag == 'object' && 'changeColor'}
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            style={
+              active.tag == 'object'
+                ? {
+                    backgroundColor: '#1f7a8c',
+                    border: '2px solid #022b3a',
+                    color: 'white',
+                    boxShadow: '0 10px 10px 0 #0000004d',
+                  }
+                : null
+            }
             data-tab="object"
           >
             undone

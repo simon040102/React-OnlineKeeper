@@ -13,7 +13,7 @@ const CreateArea = (props) => {
       content: '',
     },
   });
-  
+
   const CreateNew = (e) => {
     const { name, value } = e.target;
     setNote({
@@ -30,7 +30,7 @@ const CreateArea = (props) => {
         headers: { authorization },
       })
       .then((res) => {
-        console.log(res)
+        console.log(res);
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -38,7 +38,7 @@ const CreateArea = (props) => {
           showConfirmButton: false,
           timer: 1500,
         });
-         props.init();
+        props.init();
         setNote({
           todo: {
             content: '',
@@ -47,20 +47,24 @@ const CreateArea = (props) => {
       });
   };
   return (
-    <div className="">
-      <div className="inputArea">
+    
+      <div className="relative w-9/12 md:w-6/12 mx-auto bg-white p-5 rounded-xl mb-8 shadow-2xl">
         <textarea
+          className="w-full focus:outline-none text-md resize-none"
           onChange={CreateNew}
           name="content"
           placeholder="Take a note"
           rows="3"
           value={note.todo.content}
         ></textarea>
-        <button className="add" onClick={handleClick}>
+        <button
+          className="add absolute -bottom-4 right-5 bg-sky-200 rounded-full w-9 h-9 shadow-2xl text-gray-700"
+          onClick={handleClick}
+        >
           <AddCircleIcon />
         </button>
       </div>
-    </div>
+  
   );
 };
 export default CreateArea;

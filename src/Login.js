@@ -28,9 +28,9 @@ const Login = (props) => {
     if (inform.email == '' || inform.password == '') {
       return;
     }
-    console.log(inform);
+
     const obj = { user: inform };
-    console.log(obj);
+
     axios
       .post('https://todoo.5xcamp.us/users/sign_in', obj)
       .then((res) => {

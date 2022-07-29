@@ -17,7 +17,7 @@ const Select=(props)=>{
       >
         <li className="w-1/3">
           <button
-            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl transition duration-300 ease-out "
             style={
               active.tag == 'all'
                 ? {
@@ -35,7 +35,7 @@ const Select=(props)=>{
         </li>
         <li className="w-1/3">
           <button
-            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl transition duration-300 ease-out "
             style={
               active.tag == 'string'
                 ? {
@@ -53,7 +53,7 @@ const Select=(props)=>{
         </li>
         <li className="w-1/3">
           <button
-            className="w-full leading-7 bg-teal-100 rounded-xl text-xl"
+            className="w-full leading-7 bg-teal-100 rounded-xl text-xl transition duration-300 ease-out "
             style={
               active.tag == 'object'
                 ? {

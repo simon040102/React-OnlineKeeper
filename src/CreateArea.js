@@ -47,24 +47,22 @@ const CreateArea = (props) => {
       });
   };
   return (
-    
-      <div className="relative w-9/12 md:w-6/12 mx-auto bg-white p-5 rounded-xl mb-8 shadow-2xl">
-        <textarea
-          className="w-full focus:outline-none text-md resize-none"
-          onChange={CreateNew}
-          name="content"
-          placeholder="Take a note"
-          rows="3"
-          value={note.todo.content}
-        ></textarea>
-        <button
-          className="add absolute -bottom-4 right-5 bg-sky-200 rounded-full w-9 h-9 shadow-2xl text-gray-700"
-          onClick={handleClick}
-        >
-          <AddCircleIcon />
-        </button>
-      </div>
-  
+    <div className="relative w-9/12 md:w-6/12 mx-auto bg-white p-5 rounded-xl mb-8 shadow-2xl">
+      <textarea
+        className="w-full focus:outline-none text-md resize-none"
+        onChange={CreateNew}
+        name="content"
+        placeholder="Take a note"
+        rows="3"
+        value={note.todo.content}
+      ></textarea>
+      <button
+        className="add absolute -bottom-4 right-5 bg-sky-200 rounded-full w-9 h-9 shadow-2xl text-gray-700"
+        onClick={handleClick}
+      >
+        <AddCircleIcon />
+      </button>
+    </div>
   );
 };
 export default CreateArea;

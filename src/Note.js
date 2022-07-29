@@ -62,25 +62,30 @@ const Note = (props) => {
   }
   return (
     <div
-      className="relative p-4 w-9/12 md:w-80 h-40 bg-gray-50 shadow-2xl rounded-xl mb-5 mx-3"
-      style={{ backgroundColor: doneCheck() && '#022b3a81' }}
+      className="relative p-4 w-9/12 md:w-80 h-40 bg-gray-50 shadow-2xl rounded-xl mb-5 mx-3 transition duration-300"
+      style={
+        doneCheck()
+          ? { backgroundColor: '#022b3a81', transition: ' 0.3s' }
+          : null
+      }
       onMouseMove={mouseEdit}
       onMouseOut={mouseOut}
     >
       <p
         style={
           doneCheck()
-            ? { color: '#abafbc', textDecoration: 'line-through' }
+            ? {
+                color: '#abafbc',
+                textDecoration: 'line-through',
+                transition: ' 0.3s',
+              }
             : null
         }
       >
         {props.content}
       </p>
       <div className="noteButton absolute bottom-2 flex justify-between w-full pr-10">
-        <button
-          data-id={props.id}
-          onClick={handleDone}
-        >
+        <button data-id={props.id} onClick={handleDone}>
           {doneCheck() ? 'Finished' : 'Done'}
         </button>
         <div>
@@ -91,10 +96,7 @@ const Note = (props) => {
           >
             <ModeEditIcon  style={{ display: edit ? 'inline' : 'none' }} />
           </button> */}
-          <button
-            data-id={props.id}
-            onClick={handleDelete}
-          >
+          <button data-id={props.id} onClick={handleDelete}>
             <DeleteIcon />
           </button>
         </div>
